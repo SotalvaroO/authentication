@@ -16,6 +16,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
     author: app.get("pkg").author,
+    Test: 'Prueba CI/CD' 
   });
 });
 
