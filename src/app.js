@@ -1,5 +1,6 @@
 import { createRoles } from "./libs/initialSetup";
 
+const cors = require("cors")
 const express = require("express");
 const morgan = require("morgan");
 const pkg = require("../package.json");
@@ -7,6 +8,7 @@ const pkg = require("../package.json");
 import authRoutes from "./routes/auth.routes";
 
 const app = express();
+app.use(cors());
 createRoles();
 app.set("pkg", pkg);
 
